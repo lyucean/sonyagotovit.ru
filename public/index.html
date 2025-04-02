@@ -8,6 +8,7 @@
   <meta name="keywords" content="кейтеринг Санкт-Петербург, Соня готовит, заказать кейтеринг, вкусный кейтеринг, организация мероприятий">
   <meta name="author" content="Соня готовит">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50%' x='50%' text-anchor='middle' dominant-baseline='middle' font-size='80'>🍕</text></svg>">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -63,6 +64,25 @@
       // Меняем текст элемента с классом .food-items на новое эмодзи
       $('.food-items').text(randomEmoji);
     }, 700); // Интервал в 1000 миллисекунд (1 секунда)
+
+    // Функция для обновления фавикона
+    function updateFavicon(emoji) {
+      const favicon = document.querySelector("link[rel='icon']");
+      if (!favicon) {
+        const newFavicon = document.createElement("link");
+        newFavicon.rel = "icon";
+        newFavicon.href = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50%' x='50%' text-anchor='middle' dominant-baseline='middle' font-size='80'>${emoji}</text></svg>`;
+        document.head.appendChild(newFavicon);
+      } else {
+        favicon.href = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50%' x='50%' text-anchor='middle' dominant-baseline='middle' font-size='80'>${emoji}</text></svg>`;
+      }
+    }
+
+    // Устанавливаем интервал для смены эмодзи каждую секунду
+    setInterval(() => {
+      const randomEmoji = getRandomFoodEmoji();
+      updateFavicon(randomEmoji);
+    }, 1000); // Интервал в 1000 миллисекунд (1 секунда)
   });
 </script>
 
