@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Соня готовит - Кейтеринг в Санкт-Петербурге</title>
+  <meta name="description" content="Соня готовит — кейтеринг в Санкт-Петербурге. Мы создаём кулинарные шедевры для вашего мероприятия. Закажите вкусный праздник у нас!">
+  <meta name="keywords" content="кейтеринг Санкт-Петербург, Соня готовит, заказать кейтеринг, вкусный кейтеринг, организация мероприятий">
+  <meta name="author" content="Соня готовит">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #FF6B6B;
+      --secondary-color: #4ECDC4;
+      --text-color: #2C3E50;
+      --bg-color: #F7F9FC;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #F7F9FC 0%, #E3E7ED 100%);
+      min-height: 100vh;
+      color: var(--text-color);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      margin: 20px 0;
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      font-weight: 700;
+      margin-bottom: 30px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .plate-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 40px auto;
+      perspective: 1000px;
+    }
+
+    .plate {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: floatPlate 6s infinite ease-in-out;
+    }
+
+    .plate-top {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+      border-radius: 50%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .food-items {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 8em;
+      display: flex;
+      gap: 10px;
+      animation: rotateFoodItems 20s infinite linear;
+    }
+
+    .coming-soon {
+      font-size: 1.8em;
+      font-weight: 600;
+      margin: 20px 0;
+      text-align: center;
+      color: var(--primary-color);
+    }
+
+    .funny-text {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin: 15px 0;
+      color: var(--text-color);
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      margin: 20px 0;
+      width: 100%;
+      max-width: 800px;
+      transform: translateY(0);
+      transition: transform 0.3s ease;
+    }
+
+    .contact-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    @keyframes floatPlate {
+      0%, 100% { transform: translateY(0) rotateX(10deg); }
+      50% { transform: translateY(-20px) rotateX(5deg); }
+    }
+
+    @keyframes rotateFoodItems {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5em; }
+      .glass-card { padding: 20px; }
+      .plate-container { width: 200px; height: 200px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="glass-card">
+    <h1>Соня готовит</h1>
+    <div class="plate-container">
+      <div class="plate">
+        <div class="plate-top">
+          <div class="food-items">🍽️</div>
+        </div>
+      </div>
+    </div>
+    <div class="coming-soon">Готовим что-то особенное</div>
+
+    <div class="funny-text">
+      Пока наши шеф-повара создают кулинарные шедевры,
+      а команда придумывает, как удивить вас ещё больше...
+    </div>
+
+    <div class="funny-text">
+      Мы готовим для вас нечто невероятное!
+      Каждое блюдо — это история, каждая подача — искусство.
+    </div>
+  </div>
+
+  <div class="glass-card contact-card">
+    <h2>Хотите заказать особенное мероприятие?</h2>
+    <p class="funny-text">Мы уже готовы создавать кулинарные шедевры для ваших событий</p>
+    <a href="tel:+7XXXXXXXXXX" class="contact-button">Позвонить нам</a>
+  </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    const foodEmoji = ['🍕', '🍔', '🍟', '🌮', '🥗', '🍱', '🍜', '🍰', '🥪', '🥘', '🥨', '🧁', '🥖', '🍝', '🍣', '🍤', '🍪', '🎂'];
+
+    let foodIndex = 0;
+    setInterval(() => {
+      foodIndex = (foodIndex + 1) % foodEmoji.length;
+      $('.food-items').text(foodEmoji[foodIndex]);
+    }, 2000);
+  });
+</script>
+</body>
+</html>

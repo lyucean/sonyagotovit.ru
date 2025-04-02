@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  nginx-sonyagotovit:
+    restart: unless-stopped
+    image: nginx:latest
+    container_name: sonyagotovit-nginx
+    hostname: sonyagotovit.ru
+    volumes:
+      - ./public:/usr/share/nginx/html
+    environment:
+      - NGINX_HOST=sonyagotovit.ru
+      - NGINX_INDEX=index.html
+      - NGINX_ROOT=/usr/share/nginx/html
+      - NGINX_PORT=80
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.nginx-sonyagotovit.rule=Host(`sonyagotovit.ru`)
+      - traefik.http.routers.nginx-sonyagotovit.entrypoints=websecure
+      - traefik.http.routers.nginx-sonyagotovit.tls=true
+      - traefik.http.routers.nginx-sonyagotovit.tls.certresolver=letsencrypt
+      - traefik.http.services.nginx-sonyagotovit.loadbalancer.server.port=80
+    networks:
+      - web
+
+networks:
+  web:
+    external: true # стандартная для всех на этом сервере
