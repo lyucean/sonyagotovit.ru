@@ -3,91 +3,278 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Соня готовит - Кейтеринг в Санкт-Петербурге</title>
-  <meta name="description" content="Соня готовит — кейтеринг в Санкт-Петербурге. Мы создаём кулинарные шедевры для вашего мероприятия. Закажите вкусный праздник у нас!">
-  <meta name="keywords" content="кейтеринг Санкт-Петербург, Соня готовит, заказать кейтеринг, вкусный кейтеринг, организация мероприятий">
-  <meta name="author" content="Соня готовит">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50%' x='50%' text-anchor='middle' dominant-baseline='middle' font-size='80'>🍕</text></svg>">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <title>СоняГотовит - Кейтеринг в Питере</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-  <div class="glass-card">
-    <h1>Соня готовит</h1>
-    <div class="plate-container">
-      <div class="plate">
-        <div class="plate-top">
-          <div class="food-items">🍽️</div>
-        </div>
+  <header class="header">
+      <div class="logo-header">
+          <div class="logo-circle">
+              <div class="logo-leaf"></div>
+          </div>
+          <div class="logo-text">СоняГотовит</div>
       </div>
-    </div>
-    <div class="coming-soon">Готовим что-то особенное</div>
+      
+      <!-- Мобильное бургер-меню -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+      </button>
+      
+      <nav class="nav" id="nav">
+          <ul class="nav-menu">
+              <li><a href="#home">Главная</a></li>
+              <li><a href="#catalog">Каталог</a></li>
+              <li><a href="#about">О нас</a></li>
+              <li><a href="#contact">Контакты</a></li>
+          </ul>
+      </nav>
+  </header>
 
-    <div class="funny-text">
-      Пока наши шеф-повара создают кулинарные шедевры,
-      а команда придумывает, как удивить вас ещё больше...
-    </div>
+  <section class="hero" id="home">
+      <div class="hero-content">
+          <div class="hero-text">
+              <h1>Вкусная еда для <span class="highlight">твоих событий</span></h1>
+              <div class="hero-location">📍 Санкт-Петербург</div>
+              <p>Готовим с душой и доставляем с заботой. Кейтеринг для корпоративов, праздников и просто хорошего настроения!</p>
+              <a href="#catalog" class="cta-button">Посмотреть меню</a>
+          </div>
+          <div class="hero-image">
+              <div class="hero-circle"></div>
+          </div>
+      </div>
+  </section>
 
-    <div class="funny-text">
-      Мы готовим для вас нечто невероятное!
-      <br/>
-      Каждое блюдо — это история, каждая подача — искусство.
-    </div>
-  </div>
+  <section class="section" id="about">
+      <h2 class="section-title">Почему выбирают нас</h2>
+      <p class="section-subtitle">Мы делаем больше, чем просто готовим еду</p>
+      <div class="features">
+          <div class="feature-card">
+              <div class="feature-icon">⚡</div>
+              <div class="feature-title">Быстрая доставка</div>
+              <div class="feature-text">Привезём горячее и свежее точно в срок. Ваши гости будут довольны!</div>
+          </div>
+          <div class="feature-card">
+              <div class="feature-icon">🌿</div>
+              <div class="feature-title">Свежие продукты</div>
+              <div class="feature-text">Используем только качественные ингредиенты от проверенных поставщиков</div>
+          </div>
+          <div class="feature-card">
+              <div class="feature-icon">👨‍🍳</div>
+              <div class="feature-title">Опытные повара</div>
+              <div class="feature-text">Соня и команда профессионалов с многолетним опытом</div>
+          </div>
+          <div class="feature-card">
+              <div class="feature-icon">💰</div>
+              <div class="feature-title">Честные цены</div>
+              <div class="feature-text">Прозрачное ценообразование без скрытых доплат</div>
+          </div>
+          <div class="feature-card">
+              <div class="feature-icon">🎨</div>
+              <div class="feature-title">Красивая подача</div>
+              <div class="feature-text">Каждое блюдо оформляем с любовью к деталям</div>
+          </div>
+          <div class="feature-card">
+              <div class="feature-icon">🤝</div>
+              <div class="feature-title">Индивидуальный подход</div>
+              <div class="feature-text">Учтём все ваши пожелания и особенности мероприятия</div>
+          </div>
+      </div>
+  </section>
 
-  <div class="glass-card contact-card">
-    <h2>Хотите заказать особенное мероприятие?</h2>
-    <p class="funny-text">Мы уже готовы создавать кулинарные шедевры для ваших событий</p>
-    <a href="tel:+79119969697" class="contact-button">Позвонить нам</a>
-  </div>
-</div>
+  <section class="catalog-section" id="catalog">
+      <h2 class="section-title">Наше меню</h2>
+      <p class="section-subtitle">Выбирайте блюда на любой вкус</p>
+      
+      <div class="catalog-filters">
+          <button class="filter-btn active" data-filter="all">Все блюда</button>
+          <button class="filter-btn" data-filter="snacks">Закуски</button>
+          <button class="filter-btn" data-filter="hot">Горячее</button>
+          <button class="filter-btn" data-filter="salads">Салаты</button>
+          <button class="filter-btn" data-filter="desserts">Десерты</button>
+      </div>
 
-<script>
-  $(document).ready(function() {
-    // Массив с эмодзи еды
-    const foodEmoji = ['🍕', '🍔', '🍟', '🌮', '🥗', '🍱', '🍜', '🍰', '🥪', '🥘', '🥨', '🧁', '🥖', '🍝', '🍣', '🍤', '🍪', '🎂'];
+      <div class="catalog-grid">
+          <div class="dish-card" data-category="snacks">
+              <div class="dish-image">🥖</div>
+              <div class="dish-info">
+                  <span class="dish-category">Закуски</span>
+                  <div class="dish-name">Брускетты микс</div>
+                  <div class="dish-description">Ассорти из брускетт с томатами, сыром и зеленью на хрустящем хлебе</div>
+                  <div class="dish-footer">
+                      <div class="dish-price">от 450₽</div>
+                      <button class="order-btn">Заказать</button>
+                  </div>
+              </div>
+          </div>
 
-    // Функция для выбора случайного эмодзи
-    function getRandomFoodEmoji() {
-      // Генерируем случайный индекс от 0 до длины массива foodEmoji
-      const randomIndex = Math.floor(Math.random() * foodEmoji.length);
-      // Возвращаем эмодзи по этому индексу
-      return foodEmoji[randomIndex];
-    }
+          <div class="dish-card" data-category="snacks">
+              <div class="dish-image">🧀</div>
+              <div class="dish-info">
+                  <span class="dish-category">Закуски</span>
+                  <div class="dish-name">Сырная тарелка</div>
+                  <div class="dish-description">Изысканные сыры с виноградом, орехами и мёдом</div>
+                  <div class="dish-footer">
+                      <div class="dish-price">от 890₽</div>
+                      <button class="order-btn">Заказать</button>
+                  </div>
+              </div>
+          </div>
 
-    // Устанавливаем интервал для смены эмодзи каждую секунду
-    setInterval(() => {
-      // Получаем случайное эмодзи
-      const randomEmoji = getRandomFoodEmoji();
-      // Меняем текст элемента с классом .food-items на новое эмодзи
-      $('.food-items').text(randomEmoji);
-    }, 700); // Интервал в 1000 миллисекунд (1 секунда)
+          <div class="dish-card" data-category="hot">
+              <div class="dish-image">🍗</div>
+              <div class="dish-info">
+                  <span class="dish-category">Горячее</span>
+                  <div class="dish-name">Куриные крылышки BBQ</div>
+                  <div class="dish-description">Сочные крылышки в пикантном соусе барбекю</div>
+                  <div class="dish-footer">
+                      <div class="dish-price">от 650₽</div>
+                      <button class="order-btn">Заказать</button>
+                  </div>
+              </div>
+          </div>
 
-    // Функция для обновления фавикона
-    function updateFavicon(emoji) {
-      const favicon = document.querySelector("link[rel='icon']");
-      if (!favicon) {
-        const newFavicon = document.createElement("link");
-        newFavicon.rel = "icon";
-        newFavicon.href = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50%' x='50%' text-anchor='middle' dominant-baseline='middle' font-size='80'>${emoji}</text></svg>`;
-        document.head.appendChild(newFavicon);
-      } else {
-        favicon.href = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50%' x='50%' text-anchor='middle' dominant-baseline='middle' font-size='80'>${emoji}</text></svg>`;
-      }
-    }
+          <div class="dish-card" data-category="hot">
+              <div class="dish-image">🥩</div>
+              <div class="dish-info">
+                  <span class="dish-category">Горячее</span>
+                  <div class="dish-name">Стейк из говядины</div>
+                  <div class="dish-description">Сочный стейк средней прожарки с овощами гриль</div>
+                  <div class="dish-footer">
+                      <div class="dish-price">от 1200₽</div>
+                      <button class="order-btn">Заказать</button>
+                  </div>
+              </div>
+          </div>
 
-    // Устанавливаем интервал для смены эмодзи каждую секунду
-    setInterval(() => {
-      const randomEmoji = getRandomFoodEmoji();
-      updateFavicon(randomEmoji);
-    }, 1000); // Интервал в 1000 миллисекунд (1 секунда)
-  });
-</script>
+          <div class="dish-card" data-category="salads">
+              <div class="dish-image">🥗</div>
+              <div class="dish-info">
+                  <span class="dish-category">Салаты</span>
+                  <div class="dish-name">Цезарь с курицей</div>
+                  <div class="dish-description">Классический салат с нежной курицей и соусом</div>
+                  <div class="dish-footer">
+                      <div class="dish-price">от 520₽</div>
+                      <button class="order-btn">Заказать</button>
+                  </div>
+              </div>
+          </div>
 
+          <div class="dish-card" data-category="salads">
+              <div class="dish-image">🍅</div>
+              <div class="dish-info">
+                  <span class="dish-category">Салаты</span>
+                  <div class="dish-name">Греческий салат</div>
+                  <div class="dish-description">Свежие овощи, фета, маслины и ароматные травы</div>
+                  <div class="dish-footer">
+                      <div class="dish-price">от 480₽</div>
+                      <button class="order-btn">Заказать</button>
+                  </div>
+              </div>
+          </div>
 
-<!-- Yandex.Metrika counter -->
+          <div class="dish-card" data-category="desserts">
+              <div class="dish-image">🍰</div>
+              <div class="dish-info">
+                  <span class="dish-category">Десерты</span>
+                  <div class="dish-name">Тирамису</div>
+                  <div class="dish-description">Нежный итальянский десерт с кофейным ароматом</div>
+                  <div class="dish-footer">
+                      <div class="dish-price">от 380₽</div>
+                      <button class="order-btn">Заказать</button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="dish-card" data-category="desserts">
+              <div class="dish-image">🎂</div>
+              <div class="dish-info">
+                  <span class="dish-category">Десерты</span>
+                  <div class="dish-name">Торт на заказ</div>
+                  <div class="dish-description">Индивидуальный торт по вашему дизайну и вкусу</div>
+                  <div class="dish-footer">
+                      <div class="dish-price">от 2500₽</div>
+                      <button class="order-btn">Заказать</button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="dish-card" data-category="hot">
+              <div class="dish-image">🍝</div>
+              <div class="dish-info">
+                  <span class="dish-category">Горячее</span>
+                  <div class="dish-name">Паста Карбонара</div>
+                  <div class="dish-description">Классическая итальянская паста со сливочным соусом</div>
+                  <div class="dish-footer">
+                      <div class="dish-price">от 580₽</div>
+                      <button class="order-btn">Заказать</button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="dish-card" data-category="snacks">
+              <div class="dish-image">🍤</div>
+              <div class="dish-info">
+                  <span class="dish-category">Закуски</span>
+                  <div class="dish-name">Креветки в кляре</div>
+                  <div class="dish-description">Хрустящие креветки с пикантным соусом</div>
+                  <div class="dish-footer">
+                      <div class="dish-price">от 780₽</div>
+                      <button class="order-btn">Заказать</button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="dish-card" data-category="salads">
+              <div class="dish-image">🥑</div>
+              <div class="dish-info">
+                  <span class="dish-category">Салаты</span>
+                  <div class="dish-name">Салат с авокадо</div>
+                  <div class="dish-description">Лёгкий салат с авокадо, рукколой и креветками</div>
+                  <div class="dish-footer">
+                      <div class="dish-price">от 620₽</div>
+                      <button class="order-btn">Заказать</button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="dish-card" data-category="desserts">
+              <div class="dish-image">🍮</div>
+              <div class="dish-info">
+                  <span class="dish-category">Десерты</span>
+                  <div class="dish-name">Панна-котта</div>
+                  <div class="dish-description">Нежный итальянский десерт с ягодным соусом</div>
+                  <div class="dish-footer">
+                      <div class="dish-price">от 320₽</div>
+                      <button class="order-btn">Заказать</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+      <h2 class="section-title">Свяжитесь с нами</h2>
+      <p class="section-subtitle">Готовы обсудить ваше мероприятие</p>
+      <div class="social-links">
+          <a href="tel:+79119969697" class="social-link">📞 Позвонить</a>
+          <a href="https://t.me/sofia_gadget" class="social-link">✈️ Telegram</a>
+          <a href="https://wa.me/79119969697" class="social-link">💬 WhatsApp</a>
+      </div>
+      <div style="margin-top: 50px; font-size: 1.2rem;">
+          Работаем ежедневно с 9:00 до 21:00
+      </div>
+  </section>
+
+  <footer class="footer">
+      <p>© 2025 СоняГотовит | Санкт-Петербург</p>
+      <p style="margin-top: 10px; opacity: 0.7;">Сделано с любовью ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();
