@@ -5,10 +5,12 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     background: #FFF8F0;
     color: #2D3436;
     overflow-x: hidden;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 .header {
@@ -86,7 +88,18 @@ body {
 .logo-text {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #2D3436;
+    display: flex;
+    gap: 0;
+}
+
+.logo-name {
+    color: #FF6B35;
+    font-weight: 800;
+}
+
+.logo-action {
+    color: #A8B89F;
+    font-weight: 700;
 }
 
 .nav {
